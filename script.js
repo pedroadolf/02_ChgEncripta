@@ -1,14 +1,13 @@
-
 function encriptar() {
-  // TODO obtener el texto de entrada
+  // Obtain the entrance text
   let textoPlano = document.getElementById("texto").value;
 
-  // TODO  obtener elemento DOM que se actualizaran
+  // Obtain dom element that will be updated
   let tituloMensaje = document.getElementById("titulo-mensaje");
   let parrafo = document.getElementById("parrafo");
   let muñeco = document.getElementById("muñeco");
 
-  // TODO  Cifrar el texto
+  // CapHar the text
   let textoCifrado = textoPlano
     .replace(/e/gi, "enter")
     .replace(/i/gi, "imes")
@@ -21,17 +20,17 @@ function encriptar() {
     .replace(/ó/gi, "ói")
     .replace(/ú/gi, "úi");
 
-  // TODO  Si el texto no es vacío mostrar el texto
+  // If the text is not empty to show the text
   if (textoPlano.length != 0) {
-    // TODO  Actualizar el campo de entrada con el texto cifrado
+    // Update the entrance field with the encrypted text
     document.getElementById("texto").value = textoCifrado;
 
-    // TODO  Mostrar el mensaje de exito
+    // Show the successful message
     tituloMensaje.textContent = "Texto encriptado con éxito";
     parrafo.textContent = "";
     muñeco.src = "05_img/encriptado.png";
 
-    // TODO  Mostrar alerta de exito
+    // Show success alert
     swal
       .fire({
         title: "¡Encriptado con éxito!",
@@ -43,15 +42,15 @@ function encriptar() {
         },
       })
       .then(() => {
-        // TODO  Registra mensaje en conslola
+        // record message in console
         console.log("¡Alerta cerrada! El usuario reconoció el cifrado exitoso.");
       });
   } else {
-    // TODO  Muestra mensaje de advertencia
+    // Sample warning message
     muñeco.src = "05_img/laptop.png";
     tituloMensaje.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
-    // TODO  Mostrar alerta de advertencia
+    // Show warning alert
     swal
       .fire({
         title: "¡Tsss!",
@@ -60,22 +59,22 @@ function encriptar() {
         button: "Aceptar",
       })
       .then(() => {
-        // TODO  Registra mensaje en conslola
+        // record message in console
         console.log("¡Alerta cerrada! El usuario reconoció el cifrado exitoso.");
       });
   }
 }
 
-// TODO  Desencripta un texto
+// Disconceptions a text
 function desencriptar() {
-  // TODO obtener el texto de entrada
+  // Obtain the entrance text
   let texto = document.getElementById("texto").value;
 
-  // TODO  obtener elemento DOM que se actualizaran
+  // Obtain dom element that will be updated
   let tituloMensaje = document.getElementById("titulo-mensaje");
   let parrafo = document.getElementById("parrafo");
   let muñeco = document.getElementById("muñeco");
-  // TODO  desencripta el texto
+  // Disappoints the text
   let textoCifrado = texto
     .replace(/enter/gi, "e")
     .replace(/imes/gi, "i")
@@ -88,17 +87,17 @@ function desencriptar() {
     .replace(/ói/gi, "ó")
     .replace(/úi/gi, "ú");
 
-  // TODO  Si el texto no es vacío mostrar el texto
+  // If the text is not empty to show the text
   if (texto.length != 0) {
-    // TODO  Actualizar el campo de entrada con el texto descifrado
+    // Update the entrance field with the deciphered text
     document.getElementById("texto").value = textoCifrado;
 
-    // TODO  Mostrar el mensaje de exito
+    // Show the successful message
     tituloMensaje.textContent = "Texto desencriptado con éxito";
     parrafo.textContent = "";
     muñeco.src = "05_img/success.png";
 
-    // TODO  Mostrar alerta de exito
+    // Show success alert
     swal
       .fire({
         title: "¡Desencriptado con إexito!",
@@ -110,16 +109,16 @@ function desencriptar() {
         },
       })
       .then(() => {
-        // TODO  Registra mensaje en conslola
+        // record message in console
         console.log("¡Alerta cerrada! El usuario reconoció el cifrado exitoso.");
       });
   } else {
-    // TODO  Muestra mensaje de advertencia
+    // Sample warning message
     muñeco.src = "05_img/laptop.png";
     tituloMensaje.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
 
-    // TODO  Mostrar alerta de advertencia
+    // Show warning alert
     swal
       .fire({
         title: "¡Tsss!",
@@ -128,7 +127,7 @@ function desencriptar() {
         button: "Aceptar",
       })
       .then(() => {
-        // TODO  Registra mensaje en conslola
+        // record message in console
         console.log("¡Alerta cerrada! El usuario reconoció el cifrado exitoso.");
       });
   }
