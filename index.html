@@ -4,41 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encriptador de texto</title>
-    <link rel="mask-icon" href="img/favicon.ico" type="image/x-icon" sizes="32x32">
+    <link rel="shortcut-icon" href="05_img/favicon.ico" type="image/x-icon" sizes="32x32">
+    <link rel="stylesheet" href="01_bootstrap4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="03_plugins/sweetAlert2/sweetalert2.min.css">
+    <link rel="stylesheet" href="03_plugins/animate.css/animate.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn2").click(function () {
+                swal.fire({
+                    title: "¡Desencriptado con éxito!",
+                    text: "Tu mensaje ha sido desencriptado correctamente.",
+                    icon: "success",
+                    button: "Aceptar",
+                });
+            });
+        });
+    </script>
 </head>
 
+<header>
+    <img src="05_img/aluraoracle.png" alt="logo" id="logo">
+        <a href="#home" class="alluraoracle"> Challenges-One<span> Encriptador de texto</span></a>
+</header>
+
 <body>
-    <main class="container">
-        <article class="encriptar">
-            <textarea name="text" class="text-area" id="text" cols="30" rows="10" placeholder="Ingrese el texto aqui">
-            </textarea>
-        </article>
-
-        <article>
-            <p>Ingresar solo letras minusculas y sin acentos</p>
-        </article>
-
-        <section class="botones">
-            <button class="encriptar" type="button" onclick="encriptar()">Encriptar
-            </button>
-
-            <button class="desencriptar" type="button" onclick="desencriptar()">Desencriptar
-            </button>
+    <main>
+        <section class="container">
+            <article class="encriptar">
+                <textarea name="texto" class="texto" id="texto" cols="30" rows="10"
+                    placeholder="Ingresa el texto aquí"></textarea>
+                <div class="terminos">
+                    <p>Solo letras minusculas y sin acentos</p>
+                </div>
+                <div class="botones">
+                    <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
+                    <button class="btn-desencriptar" type="button" onclick="desencriptar()">Desencriptar</button>
+                    <button class="btn-copiar" id="copiarTexto">Copiar</button>
+                </div>
+            </article>
         </section>
-
-        <aside class="encriptado">
-            <img src="" alt="" id="team">
-            <section class="text-encriptado" id="text-encriptado">
-                <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
-                <p id="parrafo">Ingresa el texto que desees encriptar o desencriptar</p>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
-            </section>
-        </aside>
+        <section class="encriptado">
+            <img src="05_img/laptop.png" alt="muñeco" id="muñeco">
+            <article class="mensaje-encriptado" id="mensaje-encriptado">
+                <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+            </article>
+        </section>
     </main>
-</body>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="02_jquery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="04_popper/popper.min.js"></script>
+    <script type="text/javascript" src="01_bootstrap4/js/bootstrap.min.js"></script>
+    <!--    Plugin sweet Alert 2  -->
+    <script type="text/javascript" src="03_plugins/sweetAlert2/sweetalert2.all.min.js"></script>
 
-<script src="script.js"></script>
+</body>
 
 </html>
