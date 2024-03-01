@@ -54,7 +54,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 20px;
     line-height: 150%;
     text-indent: 13%;
 }
@@ -371,7 +371,8 @@ tn.btn-copiar:after {
     top: 15%;
 }
 
-/* Responsive design */
+/* Styles for smaller screens (up to 480px) ==============================*/
+
 @media (max-width: 480px) {
     * {
         margin: 0;
@@ -402,7 +403,8 @@ tn.btn-copiar:after {
         background: linear-gradient(0deg, rgba(154, 154, 157, 1) 5%, rgba(230, 236, 237, 1) 100%);
     }
 
-    /* Styles for smaller screens (up to 768px) */
+    /* Styles for smaller screens (up to 768px) ==============================*/
+
     @media (max-width: 768px) {
 
         .container,
