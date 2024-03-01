@@ -26,12 +26,13 @@ img {
     color: #009087;
 }
 
-.alluraoracle span{
-    color:#343a40;
+.alluraoracle span {
+    color: #343a40;
     text-decoration: none;
 }
 
-body {background: linear-gradient(0deg, rgba(154, 154, 157, 1)5%, rgba(230, 236, 237, 1) 100%);
+body {
+    background: linear-gradient(0deg, rgba(154, 154, 157, 1)5%, rgba(230, 236, 237, 1) 100%);
 }
 
 .container {
@@ -48,7 +49,7 @@ body {background: linear-gradient(0deg, rgba(154, 154, 157, 1)5%, rgba(230, 236,
     top: 15%;
     border-radius: 50px;
     border: 1px solid #009087;
-    box-shadow: #009087 0 0 20px; 
+    box-shadow: #009087 0 0 20px;
     background: #ffffff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
@@ -287,7 +288,8 @@ tn.btn-copiar:after {
     top: 180%;
     width: 160%;
     height: 190%;
-    background-color: #c51212;;
+    background-color: #c51212;
+    ;
     border-radius: 50%;
     display: block;
     transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -296,12 +298,14 @@ tn.btn-copiar:after {
 
 .btn-copiar:hover {
     color: #ffffff;
-    border: 1px solid #c51212;;
+    border: 1px solid #c51212;
+    ;
 }
 
 .btn-copiar:hover:before {
     top: -35%;
-    background-color:#c51212;;
+    background-color: #c51212;
+    ;
     transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
@@ -339,7 +343,7 @@ tn.btn-copiar:after {
 
 .mensaje-encriptado h2 {
     width: 60%;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -360,7 +364,7 @@ tn.btn-copiar:after {
 }
 
 .encriptado img {
-    position:relative;
+    position: relative;
     max-width: 100%;
     width: 80%;
     height: 50%;
@@ -368,94 +372,73 @@ tn.btn-copiar:after {
 }
 
 /* Responsive design */
-
-/* General styles */
-* {
-    margin: 0;
-    padding: 0;
-}
-
-img {
-    position: absolute;
-    max-width: 20%;
-    left: 5%;
-    top: 0.5%;
-}
-
-.alluraoracle {
-    position: absolute;
-    margin-top: 4%;
-    width: 60%;
-    height: 60px;
-    left: 5%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: bold;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 120%;
-    text-align: left;
-    color: #009087;
-}
-
-.alluraoracle span {
-    color: #343a40;
-    text-decoration: none;
-}
-
-body {
-    background: linear-gradient(0deg, rgba(154, 154, 157, 1) 5%, rgba(230, 236, 237, 1) 100%);
-}
-
-/* Media queries for responsive design */
-@media (max-width: 768px) {
-    /* Styles for smaller screens */
-
-    .container {
-        width: 100vw;
-        height: auto;
-        /* Allow content to flow naturally */
-    }
-
-    .texto {
-        width: 80%;
-        height: auto;
-        top: 20%;
-        left: 10%;
-    }
-
-    .terminos,
-    .botones {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 10px;
+@media (max-width: 480px) {
+    * {
+        margin: 0;
         padding: 0;
     }
 
-    .terminos p {
-        font-size: 16px;
-    }
-
-    .encriptado {
-        width: 80%;
-        left: 10%;
-        top: 60%;
+    img {
+        max-width: 100%;
         height: auto;
     }
 
-    .mensaje-encriptado {
-        top: 50%;
+    .alluraoracle {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: bold;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
+        text-align: left;
+        color: #009087;
     }
 
-    .encriptado img {
-        width: 50%;
-        height: auto;
+    .alluraoracle span {
+        color: #343a40;
+        text-decoration: none;
     }
 
-    .btn-encriptar,
-    .btn-desencriptar,
-    .btn-copiar {
-        margin-left: auto;
-        margin-right: auto;
+    body {
+        background: linear-gradient(0deg, rgba(154, 154, 157, 1) 5%, rgba(230, 236, 237, 1) 100%);
+    }
+
+    /* Styles for smaller screens (up to 768px) */
+    @media (max-width: 768px) {
+
+        .container,
+        .texto,
+        .encriptado {
+            width: 100%;
+        }
+
+        .texto,
+        .encriptado {
+            top: 20%;
+            padding: 10px;
+        }
+
+        .terminos,
+        .botones {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+            padding: 0;
+        }
+
+        .terminos p {
+            font-size: 16px;
+        }
+
+        .encriptado img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        .btn-encriptar,
+        .btn-desencriptar,
+        .btn-copiar {
+            margin: 0 auto;
+        }
     }
 }
