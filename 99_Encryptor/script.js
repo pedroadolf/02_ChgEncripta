@@ -28,7 +28,7 @@ function encriptar() {
     // Show the successful message
     tituloMensaje.textContent = "Texto encriptado con éxito";
     parrafo.textContent = "";
-    muñeco.src = "05_img/encriptado.png";
+    muñeco.src = "99_Encryptor/img/encriptado.png";
 
     // Show success alert
     swal
@@ -47,7 +47,7 @@ function encriptar() {
       });
   } else {
     // Sample warning message
-    muñeco.src = "05_img/laptop.png";
+    muñeco.src = "99_Encryptor/img/laptop.png";
     tituloMensaje.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
     // Show warning alert
@@ -95,7 +95,7 @@ function desencriptar() {
     // Show the successful message
     tituloMensaje.textContent = "Texto desencriptado con éxito";
     parrafo.textContent = "";
-    muñeco.src = "05_img/success.png";
+    muñeco.src = "99_Encryptor/img/success.png";
 
     // Show success alert
     swal
@@ -114,7 +114,7 @@ function desencriptar() {
       });
   } else {
     // Sample warning message
-    muñeco.src = "05_img/laptop.png";
+    muñeco.src = "99_Encryptor/img/laptop.png";
     tituloMensaje.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
 
